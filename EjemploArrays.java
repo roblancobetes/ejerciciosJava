@@ -27,11 +27,11 @@ public class EjemploArrays {
 
         }
 
-        String[] listaPalabras = {"Hola", "soy", "programador", "en", "Java"};
+    String[] listaPalabras = {"Hola", "soy", "programador", "en", "Java"};
 
-        System.out.println(crearFrase(listaPalabras));
+    System.out.println(crearFrase(listaPalabras));
 
-        System.out.println(crearFrase2(listaPalabras));
+    System.out.println(crearFrase2(listaPalabras));
 
     }
 

@@ -1,4 +1,3 @@
-
 import java.util.Arrays;
 
 public class ArraysDeArrays {
@@ -13,11 +12,11 @@ public class ArraysDeArrays {
         };
 
         int[][] B = {
-            {-1, 56},
-            {4, -5}
+            {-1, 56, 0},
+            {4, -5, 6}
         };
 
-        int[][] C = sumarMatrices(A, B);
+        int[][] C = multiplicarMatrices(A, B);
 
         //Mostrar matriz del resultado en pantalla
         for (int[] fila : C) {
@@ -66,6 +65,43 @@ public class ArraysDeArrays {
 
         return resultado;
  
+    }
+
+    //Método de Java para sumar matrices
+    public static int[][] multiplicarMatrices(int[][] A, int[][] B) {
+
+        if (A[0].length != B.length) {
+            
+            throw new IllegalArgumentException("Las matrices no se pueden multiplicar");
+
+        }
+
+        int n = A.length;
+
+        int m = B[0].length;
+
+        int l = B.length;
+
+        int[][] resultado = new int[n][m];
+
+        for (int i = 0; i < n; i++) {
+
+            for (int j = 0; j < m; j++) {
+
+                resultado[i][j] = 0;
+
+                for (int k = 0; k < l; k++) {
+
+                    resultado[i][j] += A[i][k]*B[k][j];
+                    
+                }
+                
+            }
+            
+        }
+
+        return resultado;
+
     }
 
 }

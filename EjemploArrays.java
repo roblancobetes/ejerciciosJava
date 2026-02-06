@@ -25,10 +25,43 @@ public class EjemploArrays {
             else System.out.println("Hola soy " + nombres[idx] +
             " tengo " + edades[idx] + " años y no me gusta nada programar");
 
+        }
+
+        String[] listaPalabras = {"Hola", "soy", "programador", "en", "Java"};
+
+        System.out.println(crearFrase(listaPalabras));
+
+        System.out.println(crearFrase2(listaPalabras));
+
+    }
+
+    public static String crearFrase(String[] listaPalabras) {
+
+        String frase = "";
+
+        for (int i = 0; i < listaPalabras.length - 1; i++) {
+            
+            frase = frase + listaPalabras[i] + " ";
 
         }
 
+        frase = frase + listaPalabras[listaPalabras.length - 1] + ".";
 
+        return frase;
+
+    }
+
+        public static String crearFrase2(String[] listaPalabras) {
+
+        String frase = "";
+
+        for (String palabra: listaPalabras) {
+            
+            frase = frase + palabra + " ";
+
+        }
+
+        return frase.substring(0, frase.length()-1) + ".";
 
     }
 
